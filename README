@@ -2,6 +2,31 @@ st - simple terminal
 --------------------
 st is a simple terminal emulator for X which sucks less.
 
+Notes about this fork
+---------------------
+
+This is a fork of ST, the original repo can be found here: https://git.suckless.org/st/
+
+The original ST webpage is here: https://st.suckless.org/
+
+This fork has the following changes from version 0.8.1
+
+Patches applied:
+
+* Box Draw : Improves box drawing for NCurses applications : https://st.suckless.org/patches/boxdraw/
+* Hide Cursor : Hides the mouse cursor when typing in the terminal : https://st.suckless.org/patches/hidecursor/
+* Vert Center : Centers text on a line when line scale is modified : https://st.suckless.org/patches/vertcenter/
+
+Back Port changed:
+
+Additionally I've back ported several up-stream fixes for memory leaks and crashes that were not in the 0.8.1 release.
+This was done because the patches I wanted to apply were not compatible with the newer commits, and it was less work to
+backport the changes on the patched code than update the patches.
+
+Personal Customizations:
+
+* Modify the standard terminal blue color to be lighter, and more readbale
+* Update the pixel size to be more readbale on HiDPI screens
 
 Requirements
 ------------
@@ -31,4 +56,3 @@ See the man page for additional details.
 Credits
 -------
 Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
-
